@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import axios from 'axios';
+// import axios from 'axios';
 import { processImageFromBackend } from '../utils/imageProcessor';
 
 interface ProcessingOption {
