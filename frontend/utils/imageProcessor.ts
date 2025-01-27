@@ -15,7 +15,7 @@ export const processImageFromBackend = async (
   try {
     const baseUrl = process.env.NODE_ENV === 'development' 
       ? 'http://localhost:8000'
-      : 'https://your-vercel-deployment-url.vercel.app';
+      : 'https://imagehub-backend-elw9xu92z-protyay-deys-projects.vercel.app';
 
     const response = await axios.post(
       `${baseUrl}/api/process-image`,
