@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { Zap, Palette, Crop, Contrast, Layers } from 'lucide-react';
+import { Zap, Palette, Crop, Contrast, Layers, Pencil } from 'lucide-react';
 
 const TechniquesPage: React.FC = () => {
   const techniques = [
@@ -28,6 +28,11 @@ const TechniquesPage: React.FC = () => {
       icon: <Layers size={48} className="text-yellow-600" />,
       title: "Image Compression",
       description: "Reduce file size while maintaining image quality."
+    },
+    {
+      icon: <Pencil size={48} className="text-orange-600" />,
+      title: "Pencil Sketch",
+      description: "Transform photos into artistic pencil drawings with detailed textures."
     }
   ];
 
@@ -42,11 +47,11 @@ const TechniquesPage: React.FC = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {techniques.map((technique, index) => (
           <div 
             key={index} 
-            className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow"
+            className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow hover:transform hover:scale-105 duration-300"
           >
             <div className="flex justify-center mb-4">{technique.icon}</div>
             <h3 className="text-xl font-semibold mb-3">{technique.title}</h3>
