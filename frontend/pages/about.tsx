@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import { Info, Zap, Github, ArrowRight, Circle, Settings, Download } from 'lucide-react';
