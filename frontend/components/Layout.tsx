@@ -12,7 +12,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Imagehub' }) => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <Head>
-        <title>{`${title} | Image Processing Hub`}</title>
+        <title>{`${title} | ImageHub`}</title>
         <meta name="description" content="Advanced Image Processing Platform" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

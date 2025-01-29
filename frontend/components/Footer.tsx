@@ -4,48 +4,49 @@ import { Github, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-gray-100 mt-8">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
-        {/* Logo and Description */}
-        <div>
-          <h3 className="text-2xl font-bold mb-4">Imagehub</h3>
-          <p className="text-gray-400">
-            Advanced image processing platform enabling seamless transformations and high-quality results for all your image editing needs.
-          </p>
-        </div>
+    <footer className="bg-[#010b22] text-white py-6">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
         
-        {/* Quick Links */}
-        <div>
-          <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
-          <ul className="space-y-3">
+        {/* Left Section: Links */}
+        <div className="text-center md:text-left space-y-3">
+          <h4 className="text-2xl font-bold">Explore</h4>
+          <ul className="space-y-2 text-lg">
             <li>
-              <Link href="/process" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link
+                href="/process"
+                className="explore-link hover:text-gray-200 transition-all duration-200 transform hover:scale-110"
+              >
                 Image Processing
               </Link>
             </li>
             <li>
-              <Link href="/techniques" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link
+                href="/techniques"
+                className="explore-link hover:text-gray-200 transition-all duration-200 transform hover:scale-110"
+              >
                 Supported Techniques
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link
+                href="/about"
+                className="explore-link hover:text-gray-200 transition-all duration-200 transform hover:scale-110"
+              >
                 About Us
               </Link>
             </li>
           </ul>
         </div>
-        
-        {/* Social Links */}
-        <div>
-          <h4 className="text-xl font-semibold mb-4">Connect With Us</h4>
-          <div className="flex items-center space-x-4">
+
+        {/* Center Section: Social Links */}
+        <div className="space-y-3 text-center">
+          <h4 className="text-2xl font-bold">Connect With Us</h4>
+          <div className="flex justify-center space-x-6">
             <a
               href="https://www.github.com/protyayofficial"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-200"
+              className="text-white hover:text-gray-200 p-4 rounded-full border-2 border-transparent hover:border-gray-300 transition-all"
             >
               <Github size={28} />
             </a>
@@ -53,19 +54,25 @@ const Footer: React.FC = () => {
               href="https://www.linkedin.com/in/protyaydey"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-200"
+              className="text-white hover:text-gray-200 p-4 rounded-full border-2 border-transparent hover:border-gray-300 transition-all"
             >
               <Linkedin size={28} />
             </a>
           </div>
         </div>
       </div>
-      
-      {/* Footer Bottom */}
-      <div className="bg-gray-800 py-4">
-        <p className="text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} Imagehub. All Rights Reserved. | Developed by <span className="text-white font-semibold">Protyay Dey</span>.
-        </p>
+
+      {/* Divider Line */}
+      <div className="border-t border-gray-700 my-6"></div>
+
+      {/* Footer Bottom: Copyright and Policy Links */}
+      <div className="bg-[#010b22]">
+        <div className="container mx-auto flex justify-between items-center text-sm text-gray-400">
+          <p>© {new Date().getFullYear()} Imagehub. All Rights Reserved.</p>
+          <div className="space-x-8"> 
+            <p> Developed by Protyay</p>
+          </div>
+        </div>
       </div>
     </footer>
   );

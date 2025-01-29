@@ -22,6 +22,10 @@ class BrightnessProcessor(BaseProcessor):
         Returns:
             np.ndarray: Brightness-adjusted image
         """
+        
+        if self.factor == 0:
+            return image
+        
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
         hsv[:,:,2] = np.clip(hsv[:,:,2] * self.factor, 0, 255)
         return cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
